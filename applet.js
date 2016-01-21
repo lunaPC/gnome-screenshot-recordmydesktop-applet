@@ -1,4 +1,4 @@
-//gnome-screenshot+recordmydesktop applet 
+//gnome-screenshot-recordmydesktop applet 
 //by epcosta
 const Applet = imports.ui.applet;
 const Main = imports.ui.main;
@@ -42,15 +42,15 @@ MyApplet.prototype = {
 		this.screenshotItem = new PopupMenu.PopupSubMenuMenuItem(_("Whole Screen")); 
 		//1 Sec Delay
 		this.screenshotItem.menu.addAction(_("1 Second Delay"), function(actor, event) {
-		Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot+recordmydesktop-applet/screenshot.sh  --delay=1 ");
+		Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot-recordmydesktop-applet/screenshot.sh  --delay=1 ");
 		});
 		//3 Sec Delay
 		this.screenshotItem.menu.addAction(_("3 Second Delay"), function(actor, event) {
-		Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot+recordmydesktop-applet/screenshot.sh  --delay=3");
+		Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot-recordmydesktop-applet/screenshot.sh  --delay=3");
 		}); 
 		//5 Sec Delay
 		this.screenshotItem.menu.addAction(_("5 Second Delay"), function(actor, event) {
-		Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot+recordmydesktop-applet/screenshot.sh  --delay=5");
+		Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot-recordmydesktop-applet/screenshot.sh  --delay=5");
 		
 });  
                        
@@ -60,12 +60,12 @@ MyApplet.prototype = {
 
 		//Current Window
 		this.menu.addAction(_("Current Window"), function(event) {
-                Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot+recordmydesktop-applet/screenshot.sh  -w");
+                Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot-recordmydesktop-applet/screenshot.sh  -w");
 		}); 
 
 		//Selected Area
 		this.menu.addAction(_("Selected Area"), function(event) {
-                Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot+recordmydesktop-applet/screenshot.sh -a");
+                Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot-recordmydesktop-applet/screenshot.sh -a");
 		});
 	
 
@@ -73,12 +73,12 @@ MyApplet.prototype = {
 	this.recordItem = new PopupMenu.PopupSubMenuMenuItem(_("Record Desktop"));
 	//Start Recording With Audio
 	this.recordItem.menu.addAction(_("Start With Audio"), function(actor, event) {
-        Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot+recordmydesktop-applet/screencapture.sh");
+        Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot-recordmydesktop-applet/screencapture.sh");
 	Main.Util.spawnCommandLine("notify-send --icon=gtk-add Recording With-Audio");
 	});
 	//Start Recording No Audio
 	this.recordItem.menu.addAction(_("Start No Audio"), function(actor, event) {
-	Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot+recordmydesktop-applet/screencapture.sh --no-sound");
+	Main.Util.spawnCommandLine(GLib.get_home_dir() + "/.local/share/cinnamon/applets/gnome-screenshot-recordmydesktop-applet/screencapture.sh --no-sound");
 	Main.Util.spawnCommandLine("notify-send --icon=gtk-add Recording No-Audio");
 	});
 	//Stop Recording
