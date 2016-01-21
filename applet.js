@@ -23,7 +23,7 @@ MyApplet.prototype = {
         
         try {        
             this.set_applet_icon_symbolic_name("camera-photo-symbolic");
-            this.set_applet_tooltip(_("Take a Snapshot or Record ysour Desktop"));
+            this.set_applet_tooltip(_("Take a Snapshot or Record your Desktop"));
             
             this.menuManager = new PopupMenu.PopupMenuManager(this);
             this.menu = new Applet.AppletPopupMenu(this, orientation);
