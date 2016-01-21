@@ -6,4 +6,6 @@ A simple applet for screenshots and desktop record for cinnamon
 * recordmydesktop
 
 #Installation
-Copy the folder to ~/.local/share/cinnamon/applets/.
+* Copy the folder to ~/.local/share/cinnamon/applets/.
+* Rename the folder to gnome-screenshot-recordmydesktop-applet
+* Give execution permisions to screenshot.sh and screencapture.sh
