@@ -1,5 +1,5 @@
 {
-"uuid": "gnome-screenshot+recordmydesktop-applet",
+"uuid": "gnome-screenshot-recordmydesktop-applet",
 "name": "screenshot+recordmydesktop",
 "description": "Take A Snapshot Or Record Your Desktop",
 "icon": "applets-screenshooter"
